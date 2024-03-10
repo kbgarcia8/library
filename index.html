@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+ <title>My Library</title>
+ <style>
+    @import url('style.css');
+ </style>
+</head>
+<body>
+ <h1>MY LIBRARY</h1>
+ <div class="page">
+   <dialog id="addDialog">
+     <img src="book-open.svg" alt="svgImg1">
+     <form id="dialog_form">
+       <p>
+         <label for="book_title">Book Title:
+           <input type="text" id="book-title" name="book-title" required>
+         </label>
+       </p>
+     </form>
+     <form id="dialog_form">
+       <p>
+         <label for="book_author">Book Author:
+           <input type="text" id="book-author" name="book-author" required>
+         </label>
+       </p>
+     </form>
+     <form id="dialog_form">
+       <p>
+         <label for="book_pages">No. of pages:
+           <input type="number" id="book-pages" name="book-pages" required>
+         </label>
+       </p>
+     </form>
+     <form id="dialog_form">
+       <p>
+         <label for="book_status">Book Status: </label>
+           <select name="status_menu" id="status-menu" name="status-menu" required>
+             <option value="Not Yet Read">Choose status...</option>
+             <option>Read</option>
+             <option>Not Yet Read</option>
+           </select>
+       </p>
+       <div id="dialogButtons">
+         <button type="submit" id="add_button" value="default" formmethod="dialog">Add</button>
+         <!--practice to use button with attr formmethod="dialog" to overwrite default GET method-->
+         <button id="cancel_button" value="cancel" formmethod="dialog">Cancel</button>
+       </div>
+     </form>
+   </dialog>
+   <p id="addlib-section">
+       <button id="addlib">Add Book to Library</button>
+   </p>
+   <output id="output"></output>
+ </div>
+ <script src="library.js"></script>
+</body>
+</html>
